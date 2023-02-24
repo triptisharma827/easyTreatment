@@ -60,3 +60,61 @@ body{
 
 
 }
+
+/* html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+} */
+/* section{
+    padding-top: 10%;
+} */
+
+
+
+.heading{
+    text-align: center;
+    padding-bottom: 2rem;
+    text-shadow: var(--text-shadow);
+    text-transform: uppercase;
+    color:var(--black);
+    font-size: 50px;
+    letter-spacing: .1rem;
+}
+
+.heading span{
+    text-transform: uppercase;
+    color:var(--green);
+}
+
+
+
+
+.doctors .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:2rem;
+    
+}
+
+.doctors .box-container .box{
+    text-align: center;
+    background:#fff;
+    border-radius: 4.5rem;
+    border:var(--border);
+    box-shadow: var(--box-shadow);
+    padding:2rem;
+    width: 27rem;
+    
+}
+
+.doctors .box-container .box img{
+    height: 10rem;
+    border:var(--border);
+    border-radius: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
