@@ -10,3 +10,7 @@ document.getElementById("records").style.display="none";
 function action2(){
     document.getElementById("records").style.display="inline";
 }
+
+function action3(){
+    document.getElementById("records").style.display="inline";
+}
