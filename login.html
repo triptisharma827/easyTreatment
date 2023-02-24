@@ -17,12 +17,12 @@
     <title>easyTreatment</title>
 </head>
 
-<body>
+<body style="background-image: url('images/bg.webp');">
 
 
 <!-- login form  -->
-    <section class="login vh-100 bg-image" style="background-image: url('images/bg.webp');"  id="login">
-        <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <section class="login vh-100 "   id="login">
+        <div class="mask d-flex align-items-center h-100 ">
           <div class="container h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
               <div class="col-12 col-md-9 col-lg-7 col-xl-6">
@@ -74,51 +74,95 @@
       </section>
 
 
-      <section class="register vh-100 bg-image" style="background-image: url('images/bg.webp');"  id="registerD">
-        <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+
+
+      <!-- register as a doctor  -->
+      <section class="register vh-100 "   id="registerD">
+        <div class="mask d-flex align-items-center h-100 ">
           <div class="container h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
               <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                 <div class="card" style="border-radius: 15px;">
                   <div class="card-body p-5">
-                    <h2 class="text-uppercase text-center mb-5">Create an accounts</h2>
+                    <h2 class="text-uppercase text-center mb-5">Create new account</h2>
       
                     <form>
       
                       <div class="form-outline mb-4">
-                        <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Example1cg">Your Name</label>
+                        <label class="form-label" for="name">Your Full Name</label>
+                        <input type="text" id="name" class="form-control form-control-lg" />
+                        
                       </div>
       
                       <div class="form-outline mb-4">
-                        <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Example3cg">Your Email</label>
+                        <label class="form-label" for="aadhar">Your Aadhar Number</label>
+                        <input type="number" id="aadhar" class="form-control form-control-lg" required/>
+                        
                       </div>
       
                       <div class="form-outline mb-4">
-                        <input type="password" id="form3Example4cg" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Example4cg">Password</label>
+                        <label class="form-label" for="degree">Degree</label>
+                        <input type="file" id="degree" class="form-control-file form-control-lg" required/>
+                        
                       </div>
       
-                      <div class="form-outline mb-4">
-                        <input type="password" id="form3Example4cdg" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Example4cdg">Repeat your password</label>
+                      <div class="form-group mb-4">
+                        <label for="specilization">Select your specilization</label>
+                        <select class="form-control" id="specilization" required>
+                          <option selected> </option>
+                          <option>Anesthesiology</option>
+                          <option>Cardiology</option>
+                          <option>Dermatology</option>
+                          <option>gynecologist</option>
+                          <option>Gastroenterology</option>
+                          <option>Infectious disease</option>
+                          <option>Nephrology</option>
+                          <option>Neurology</option>
+                          <option>Orthopedics</option>
+                          <option>Otolaryngology (ENT)</option>
+                          <option>Psychiatry</option>
+                          <option>Surgery</option>
+                        </select>
+                        
                       </div>
+
+
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="Experience">Your Work Experience in Number</label>
+                        <input type="number" id="Experience" class="form-control form-control-lg" required/>
+                         </div>
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="contact">Your Contact Number</label>
+                        <input type="number" id="contact" class="form-control form-control-lg" required />
+                        
+                      </div>
+
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="pincode">Your Pin-Code</label>
+                        <input type="number" id="pincode" class="form-control form-control-lg" required/>
+                        
+                      </div>
+
+                      <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control form-control-lg" id="password"  required/>
+                      </div>
+
       
                       <div class="form-check d-flex justify-content-center mb-5">
                         <input
                           class="form-check-input me-2"
                           type="checkbox"
                           value=""
-                          id="form2Example3cg"
+                          id="Terms"
                         />
-                        <label class="form-check-label" for="form2Example3g">
+                        <label class="form-check-label" for="Terms">
                           I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
                         </label>
                       </div>
       
                       <div class="d-flex justify-content-center">
-                        <button type="button" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                        <button type="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" onclick="alert('You have successfully registered. \n Your User ID- aadhar number starting with d \n ')">Register</button>
                       </div>
       
                       <p class="text-center text-muted mt-5 mb-0">Have already an account? <button onclick="check(0)" class="fw-bold text-body cts"><u>Login here</u></button></p>
@@ -133,8 +177,11 @@
         </div>
       </section>
       
-      <section class="register vh-100 bg-image" style="background-image: url('images/bg.webp');"  id="registerP">
-        <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+
+
+      <!-- register as a patient  -->
+      <section class="register vh-100 "   id="registerP">
+        <div class="mask d-flex align-items-center h-100 ">
           <div class="container h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
               <div class="col-12 col-md-9 col-lg-7 col-xl-6">
@@ -145,23 +192,32 @@
                     <form>
       
                       <div class="form-outline mb-4">
-                        <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Example1cg">Your Name</label>
+                        <label class="form-label" for="name">Your Full Name</label>
+                        <input type="text" id="name" class="form-control form-control-lg" />
+                        
                       </div>
       
                       <div class="form-outline mb-4">
-                        <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Example3cg">Your Email</label>
+                        <label class="form-label" for="aadhar">Your Aadhar Number</label>
+                        <input type="number" id="aadhar" class="form-control form-control-lg" required/>
+                        
                       </div>
       
                       <div class="form-outline mb-4">
-                        <input type="password" id="form3Example4cg" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Example4cg">Password</label>
+                        <label class="form-label" for="contact">Your Contact Number</label>
+                        <input type="number" id="contact" class="form-control form-control-lg" required />
+                        
                       </div>
-      
+
                       <div class="form-outline mb-4">
-                        <input type="password" id="form3Example4cdg" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Example4cdg">Repeat your password</label>
+                        <label class="form-label" for="pincode">Your Pin-Code</label>
+                        <input type="number" id="pincode" class="form-control form-control-lg" required/>
+                        
+                      </div>
+
+                      <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control form-control-lg" id="password" required/>
                       </div>
       
                       <div class="form-check d-flex justify-content-center mb-5">
@@ -177,7 +233,7 @@
                       </div>
       
                       <div class="d-flex justify-content-center">
-                        <button type="button" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                        <button type="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" onclick="alert('You have successfully registered. \n Your User ID- aadhar number starting with p \n ')">Register</button>
                       </div>
       
                       <p class="text-center text-muted mt-5 mb-0">Have already an account? <button onclick="check(0)" class="fw-bold text-body cts"><u>Login here</u></button></p>
