@@ -106,28 +106,26 @@
                         <input type="file" id="degree" class="form-control-file form-control-lg" required/>
                         
                       </div>
-      
-                      <div class="form-group mb-4">
-                        <label for="specilization">Select your specilization</label>
+
                         
-                        
-                        <select class="form-control" id="specilization" required>
-                          <option selected> </option>
-                          <option>Anesthesiology</option>
-                          <option>Cardiology</option>
-                          <option>Dermatology</option>
-                          <option>gynecologist</option>
-                          <option>Gastroenterology</option>
-                          <option>Infectious disease</option>
-                          <option>Nephrology</option>
-                          <option>Neurology</option>
-                          <option>Orthopedics</option>
-                          <option>Otolaryngology (ENT)</option>
-                          <option>Psychiatry</option>
-                          <option>Surgery</option>
-                        </select>
-                        
-                      </div>
+                       
+                        <div class="dropdown form-group mb-4">
+                            <input type="button" onclick="myFunction()" value="Dropdown" class="dropbtn">
+                            <div id="myDropdown" class="dropdown-content">
+                              <input type="checkbox" style="color: black;" id="vehicle1" name="vehicle1" value="Anesthesiology" >Anesthesiology<br>
+                              <input type="checkbox" style="color: black;" id="vehicle1" name="vehicle1" value="Cardiology" >Cardiology<br>
+                              <input type="checkbox" style="color: black;" id="vehicle1" name="vehicle1" value="Dermatology" >Dermatology<br>
+                              <input type="checkbox" style="color: black;" id="vehicle1" name="vehicle1" value="gynecologist" >gynecologist<br>
+                              <input type="checkbox" style="color: black;" id="vehicle1" name="vehicle1" value="Gastroenterology" >Gastroenterology<br>
+                              <input type="checkbox" style="color: black;" id="vehicle1" name="vehicle1" value="Infectious disease" >Infectious disease<br>
+                              <input type="checkbox" style="color: black;" id="vehicle1" name="vehicle1" value="Nephrology" >Nephrology<br>
+                              <input type="checkbox" style="color: black;" id="vehicle1" name="vehicle1" value="Neurology" >Neurology<br>
+                              <input type="checkbox" style="color: black;" id="vehicle1" name="vehicle1" value="Orthopedics" >Orthopedics<br>
+                              <input type="checkbox" style="color: black;" id="vehicle1" name="vehicle1" value="Otolaryngology (ENT)" >Otolaryngology (ENT)<br>
+                              <input type="checkbox" style="color: black;" id="vehicle1" name="vehicle1" value="Psychiatry" >Psychiatry<br>
+                              <input type="checkbox" style="color: black;" id="vehicle1" name="vehicle1" value="Surgery" >Surgery<br>
+                            </div>
+                          </div>
 
 
                       <div class="form-outline mb-4">
@@ -263,7 +261,7 @@ function Login(){
       var adhar=document.getElementById('Luserid').value.slice(1);
       var statuss="a";
       var pincode="0";
-    if(document.getElementById('Luserid').value[0]=='p')fetch("https://zk9ya3vq41.execute-api.ap-south-1.amazonaws.com/testing/patient?adhar=\""+adhar+"\"", {
+    if(document.getElementById('Luserid').value[0]=='P')fetch("https://zk9ya3vq41.execute-api.ap-south-1.amazonaws.com/testing/patient?adhar=\""+adhar+"\"", {
      
      // Adding method type
      method: "GET",
@@ -290,7 +288,7 @@ function Login(){
    
    
   })
-  else if(document.getElementById('Luserid').value[0]=='d')fetch("https://zk9ya3vq41.execute-api.ap-south-1.amazonaws.com/testing/cart?adhar=\""+adhar+"\"&pincode=\""+pincode+"\"&statuss=\""+statuss+"\"", {
+  else if(document.getElementById('Luserid').value[0]=='D')fetch("https://zk9ya3vq41.execute-api.ap-south-1.amazonaws.com/testing/cart?adhar=\""+adhar+"\"&pincode=\""+pincode+"\"&statuss=\""+statuss+"\"", {
      
      // Adding method type
      method: "GET",
@@ -372,5 +370,26 @@ fetch("https://zk9ya3vq41.execute-api.ap-south-1.amazonaws.com/testing/patient?a
   })
 
     }
+    
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
   </script>
 </html>
