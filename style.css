@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+body{
+    margin: 0;
+    overflow-x: hidden;
+    background-image: url('images/bg.webp');
+    background-size: cover;
+    height: 100vh;
+}
+
+.navbar-css-container{
+    padding: 0;
+}
+.navbar-css{
+    background-color: #0dada2; 
+    
+}
+.logo-1{
+    height: 50px;
+}
+.user-icon{
+    height: 50px;
+}
+.login{
+    margin-left: 10px;
+    padding: 0 10px 0 10px;
+}
+
+
+
+
+/* search  */
+
+body{
+
+    background-color: #00838F;
+}
+
+
+.btn-secondary,
+.btn-secondary:focus,
+.btn-secondary:active{
+    color: #fff;
+    background-color: #00838f !important;
+    border-color: #00838f !important;
+    box-shadow: none;
+}
+
+
+
+.container.form-control:focus{
+    box-shadow: none;
+    border: 1px solid #00838f;
+
+
+}

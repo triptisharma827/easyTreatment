@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- stylesheet  -->
+    <link rel="stylesheet" href="stylesheets/login.css">
+    <!-- bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    
+
+    <title>easyTreatment</title>
+</head>
+
+<body style="background-image: url('images/bg.webp');">
+
+
+<!-- login form  -->
+    <section class="login vh-100 "   id="login">
+        <div class="mask d-flex align-items-center h-100 ">
+          <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+              <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                <div class="card" style="border-radius: 15px;">
+                  <div class="card-body p-5">
+                    <h2 class="text-uppercase text-center mb-5">Login</h2>
+      
+                    <form>
+      
+                      <div class="form-outline mb-4">
+                        <input type="text" id="Luserid" class="form-control form-control-lg" />
+                        <label class="form-label" for="Luserid">USER ID</label>
+                      </div>
+      
+                      <div class="form-outline mb-4">
+                        <input type="password" id="Lpassword" class="form-control form-control-lg" />
+                        <label class="form-label" for="Lpassword">PASSWORD</label>
+                      </div>
+      
+                      <div class="form-check d-flex justify-content-center mb-5">
+                        <input
+                          class="form-check-input me-2"
+                          type="checkbox"
+                          value=""
+                          id="form2Example3cg"
+                        />
+                        <label class="form-check-label" for="form2Example3g">
+                          I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
+                        </label>
+                      </div>
+      
+
+
+                      <!-- button  -->
+                      <div class="d-flex justify-content-center">
+                        <input type="button"  onclick="Login()" value="LOGIN"  class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" class="fw-bold text-body cts">
+                        
+                        
+                      </div>
+      
+                      <p class="text-center text-muted mt-5 mb-0">Create an account <input type="button"  onclick="check(1)" value="register as docter" class="fw-bold text-body cts">/<input type="button" onclick="check(2)" value="register as patient"class="fw-bold text-body cts"></p>
+                    </form>
+      
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+      <!-- register as a doctor  -->
+      <section class="register vh-100 "   id="registerD">
+        <div class="mask d-flex align-items-center h-100 ">
+          <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+              <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                <div class="card" style="border-radius: 15px;">
+                  <div class="card-body p-5">
+                    <h2 class="text-uppercase text-center mb-5">Create new account</h2>
+      
+                    <form>
+      
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="name">Your Full Name</label>
+                        <input type="text" id="name" class="form-control form-control-lg" />
+                        
+                      </div>
+      
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="aadhar">Your Aadhar Number</label>
+                        <input type="number" id="aadhar" class="form-control form-control-lg" required/>
+                        
+                      </div>
+      
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="degree">Degree</label>
+                        <input type="file" id="degree" class="form-control-file form-control-lg" required/>
+                        
+                      </div>
+
+                        
+
+                       
+                        <div class=" form-group mb-4">
+                            <input type="button" onclick="myFunction()" value="Select your specilization" class="dropbtn">
+                            <div id="myDropdown" class="form-control dropdown-menu">
+                              <input type="checkbox" style="color: black;" id="vehicle1" name="vehicle1" value="Anesthesiology" >Anesthesiology<br>
+                              <input type="checkbox" style="color: black;" id="vehicle1" name="vehicle1" value="Cardiology" >Cardiology<br>
+                              <input type="checkbox" style="color: black;" id="vehicle1" name="vehicle1" value="Dermatology" >Dermatology<br>
+                              <input type="checkbox" style="color: black;" id="vehicle1" name="vehicle1" value="gynecologist" >gynecologist<br>
+                              <input type="checkbox" style="color: black;" id="vehicle1" name="vehicle1" value="Gastroenterology" >Gastroenterology<br>
+                              <input type="checkbox" style="color: black;" id="vehicle1" name="vehicle1" value="Infectious disease" >Infectious disease<br>
+                              <input type="checkbox" style="color: black;" id="vehicle1" name="vehicle1" value="Nephrology" >Nephrology<br>
+                              <input type="checkbox" style="color: black;" id="vehicle1" name="vehicle1" value="Neurology" >Neurology<br>
+                              <input type="checkbox" style="color: black;" id="vehicle1" name="vehicle1" value="Orthopedics" >Orthopedics<br>
+                              <input type="checkbox" style="color: black;" id="vehicle1" name="vehicle1" value="Otolaryngology (ENT)" >Otolaryngology (ENT)<br>
+                              <input type="checkbox" style="color: black;" id="vehicle1" name="vehicle1" value="Psychiatry" >Psychiatry<br>
+                              <input type="checkbox" style="color: black;" id="vehicle1" name="vehicle1" value="Surgery" >Surgery<br>
+                            </div>
+                          </div>
+
+
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="Experience">Your Work Experience in Number</label>
+                        <input type="number" id="Experience" class="form-control form-control-lg" required/>
+                         </div>
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="contact">Your Contact Number</label>
+                        <input type="number" id="contact" class="form-control form-control-lg" required />
+                        
+                      </div>
+
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="pincode">Your Pin-Code</label>
+                        <input type="number" id="pincode" class="form-control form-control-lg" required/>
+                        
+                      </div>
+
+                      <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control form-control-lg" id="password"  required/>
+                      </div>
+
+      
+                      <div class="form-check d-flex justify-content-center mb-5">
+                        <input
+                          class="form-check-input me-2"
+                          type="checkbox"
+                          value=""
+                          id="Terms"
+                        />
+                        <label class="form-check-label" for="Terms">
+                          I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
+                        </label>
+                      </div>
+      
+                      <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" onclick="RegisterD()">Register</button>
+                      </div>
+      
+                      <p class="text-center text-muted mt-5 mb-0">Have already an account? <button onclick="check(0)" class="fw-bold text-body cts"><u>Login here</u></button></p>
+      
+                    </form>
+      
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+
+      <!-- register as a patient  -->
+      <section class="register vh-100 "   id="registerP">
+        <div class="mask d-flex align-items-center h-100 ">
+          <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+              <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                <div class="card" style="border-radius: 15px;">
+                  <div class="card-body p-5">
+                    <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+      
+                    <form>
+      
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="RPname">Your Full Name</label>
+                        <input type="text" id="RPname" class="form-control form-control-lg" required/>
+                        
+                      </div>
+      
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="RPaadhar">Your Aadhar Number</label>
+                        <input type="number" id="RPaadhar" class="form-control form-control-lg" required/>
+                        
+                      </div>
+      
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="RPcontact">Your Contact Number</label>
+                        <input type="number" id="RPcontact" class="form-control form-control-lg" required />
+                        
+                      </div>
+
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="RPpincode">Your Pin-Code</label>
+                        <input type="number" id="RPpincode" class="form-control form-control-lg" required/>
+                        
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="RPpassword">Password</label>
+                        <input type="text" class="form-control form-control-lg" id="RPpassword" required/>
+                      </div>
+      
+                      <div class="form-check d-flex justify-content-center mb-5">
+                        <input
+                          class="form-check-input me-2"
+                          type="checkbox"
+                          value=""
+                          id="form2Example3cg"
+                        />
+                        <label class="form-check-label" for="form2Example3g">
+                          I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
+                        </label>
+                      </div>
+      
+                      <div class="d-flex justify-content-center">
+                        <input type="button" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" onclick="RegisterP()" value="Register">
+                      </div>
+      
+                      <p class="text-center text-muted mt-5 mb-0">Have already an account? <button onclick="check(0)" class="fw-bold text-body cts"><u>Login here</u></button></p>
+      
+                    </form>
+      
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+</body>
+<script>
+    document.getElementById('registerD').style.display='none';
+    document.getElementById('registerP').style.display='none';
+    function check(val){
+        if(val==0){document.getElementById('login').style.display='block';document.getElementById('registerD').style.display='none';document.getElementById('registerP').style.display='none';}
+        else if(val==1){document.getElementById('login').style.display='none';document.getElementById('registerD').style.display='block';document.getElementById('registerP').style.display='none';}
+        else{document.getElementById('login').style.display='none';document.getElementById('registerD').style.display='none';document.getElementById('registerP').style.display='block';}
+    }
+function Login(){
+      var adhar=document.getElementById('Luserid').value.slice(1);
+      var statuss="a";
+      var pincode="0";
+    if(document.getElementById('Luserid').value[0]=='P')fetch("https://zk9ya3vq41.execute-api.ap-south-1.amazonaws.com/testing/patient?adhar=\""+adhar+"\"", {
+     
+     // Adding method type
+     method: "GET",
+      
+     // Adding headers to the request
+     headers: {
+         "Content-type": "application/json;"
+     }
+ })
+ 
+ // Converting to JSON
+ .then(response => response.json())
+  
+ // Displaying results to console
+ .then(json =>{
+    
+  let x=json["Items"][0]["password"]['S'];
+  if(document.getElementById('Lpassword').value==x){
+    localStorage.setItem("json",JSON.stringify(json));
+    window.location.replace("indexP.html");
+  }
+   else localStorage.clear();
+  
+   
+   
+  })
+  else if(document.getElementById('Luserid').value[0]=='D')fetch("https://zk9ya3vq41.execute-api.ap-south-1.amazonaws.com/testing/cart?adhar=\""+adhar+"\"&pincode=\""+pincode+"\"&statuss=\""+statuss+"\"", {
+     
+     // Adding method type
+     method: "GET",
+      
+     // Adding headers to the request
+     headers: {
+         "Content-type": "application/json;"
+     }
+ })
+ 
+ // Converting to JSON
+ .then(response => response.json())
+  
+ // Displaying results to console
+ .then(json =>{
+   
+  let x=json["Items"][0]["password"]['S'];
+  if(document.getElementById('Lpassword').value==x){
+    localStorage.setItem("json",JSON.stringify(json));
+    window.location.replace("indexD.html");
+  }
+   else localStorage.clear();
+  
+   
+  })
+  else localStorage.clear();
+}
+    
+function RegisterP(){
+    //onclick="alert('You have successfully registered. \n Your User ID- aadhar number starting with d \n ')";
+      //onclick="alert('You have successfully registered. \n Your User ID- aadhar number starting with p \n ')"
+      var adhar=document.getElementById('RPaadhar').value.toString();
+    fetch("https://zk9ya3vq41.execute-api.ap-south-1.amazonaws.com/testing/patient?adhar=\""+adhar+"\"", {
+     
+     // Adding method type
+     method: "GET",
+      
+     // Adding headers to the request
+     headers: {
+         "Content-type": "application/json;"
+     }
+ })
+ // Converting to JSON
+ .then(response => response.json())
+  
+ // Displaying results to console
+ .then(json =>{
+  let x=json["Items"].length;
+  alert(x);
+  if(x==0){
+fetch("https://zk9ya3vq41.execute-api.ap-south-1.amazonaws.com/testing/patient?adhar=\""+adhar+"\"", { 
+ // Adding method type
+ method: "POST",
+  
+ // Adding body or contents to send
+ body: JSON.stringify({
+  
+"pincode":document.getElementById('RPpincode').value.toString(),
+"name":document.getElementById('RPname').value.toString(),
+"contact":document.getElementById('RPcontact').value.toString(),
+"pass":document.getElementById('RPpassword').value.toString()
+
+ }),
+  
+ // Adding headers to the request
+ headers: {
+     "Content-type": "application/json;"
+ }
+})
+
+// Converting to JSON
+.then(response => response.json())
+
+// Displaying results to console
+.then(json =>alert('Id created!!! with userid:P'+adhar));
+  }
+  else{alert("Id already exists!!! with userid:P"+adhar);window.location.replace("index.html");}
+
+  })
+
+    }
+    
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+  </script>
+</html>
