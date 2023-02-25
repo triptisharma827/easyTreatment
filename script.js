@@ -1,8 +1,23 @@
 document.getElementById("doctors").style.display="none";
 document.getElementById("records").style.display="none";
+var counters=0,counterm=0,counterh=0,c;
+
 const jsons = JSON.parse(localStorage.getItem('json'));
 document.getElementById("pincode").value=jsons["Items"][0]["pincode"]["N"];
-
+function start(){
+    c=setInterval(function(){
+        ++counters;
+        if(counters==60){counters=0;++counterm}
+        if(counterm==60){counterm=0;++counterh}
+        
+        document.getElementById("time").innerText=((counterh<10)?'0':'')+counterh+" hh : "+((counterm<10)?'0':'')+counterm+ " mm : "+((counters<10)?'0':'')+counters+" ss";
+        
+        //if(d==true)clearInterval(c);
+    },999)
+}
+function stop(){
+    clearInterval(c);
+}
 function action(){
     var txt=document.getElementById("dropdownMenuButton").value;
     if(txt!="Select specilization")
@@ -64,3 +79,31 @@ function action2(){
     document.getElementById("doctors").style.display="none";
 }
 })}
+function action3(){
+    if(document.getElementById("patientids").value!=0)fetch("https://0eb3j5aza8.execute-api.ap-south-1.amazonaws.com/dev/cart?adhar1=\""+document.getElementById("patientids").value+"\"&adhar2=\"0\"", {
+     
+    // Adding method type
+    method: "GET",
+     
+    // Adding headers to the request
+    headers: {
+        "Content-type": "application/json;"
+    }
+})
+// Converting to JSON
+.then(response => response.json())
+ 
+// Displaying results to console
+.then(json =>{
+   if(json["Count"]!=0){
+   text="";
+   
+   for(let i=0;i<json["Count"];i++)text+="<tr><th scope=\"row\">"+(i+1)+"</th><td>"+json["Items"][i]["sickness"]["S"]+"</td><td>Dr."+json["Items"][i]["Dr"]["S"]+"</td><td>"+json["Items"][i]["prescription"]["S"]+"</td></tr>"
+   if(text.length!=0)document.getElementById("listrec").innerHTML=text;
+    else document.getElementById("listrec").innerHTML="<h1>No records</h1>";
+
+   document.getElementById("records").style.display="inline";
+}
+})   
+else alert("enter patient id");
+}
