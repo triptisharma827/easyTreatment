@@ -28,47 +28,48 @@
 
     <title>easyTreatment</title>
   </head>
+  
   <body>
     <!-- navigation bar  -->
     <nav
-      class="navbar-css-container navbar navbar-expand-lg navbar-light bg-light"
-      style="padding-top: 0px; padding-bottom: 0px"
-    >
-      <div class="navbar-css container-fluid">
-        <a class="navbar-brand" href="#"><img class="logo-1" src="images/logo.png" alt="" />easyTreatment</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto mb-2 mb-lg-0" style="margin-left: auto;">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#search">Search patient</a>
-            </li>
+    class="navbar-css-container navbar navbar-expand-lg navbar-light bg-light"
+    style="padding-top: 0px; padding-bottom: 0px"
+  >
+    <div class="navbar-css container-fluid">
+      <a class="navbar-brand" href="#"><img class="logo-1" src="images/logo.png" alt="" />easyTreatment</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto mb-2 mb-lg-0" style="margin-left: auto;">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#search">Search patient</a>
+          </li>
 
-            <li>
-              <button type="button" class="btn btn-secondary">Log out </button>
-            </li>
-          </ul>
+          <li>
+            <button type="button" class="btn btn-secondary">Log out </button>
+          </li>
+        </ul>
 
-        </div>
       </div>
-    </nav>
-
+    </div>
+  </nav>
+    <!-- search  -->
     <div class="container mt-5 "  id="attendence">
         <div class="row d-flex justify-content-center">
           <div class="col-md-10">
             <div class="card p-5 py-10"style="background-color: rgb(79,79,79,0.2); margin-top:100px;">
               <h3 class="heading">Mark Your Active Hours!</h3>
-                <h4>00 h: 00 m: 00 s</h4>
-              <p><button type="button">start</button>
-              <button type="button">stop</button></p>
-  
+                <h4 id="time"></h4>
+              <p><button type="button" class="btn btn-secondary btn-block" onclick="start()">start</button>
+              <button type="button" class="btn btn-secondary btn-block" onclick="stop()">stop</button></p>
+                
             </div>
           </div>
         </div>
@@ -87,7 +88,8 @@
 
               <div class="col-md-6">
                 <input
-                  type="text"
+                id="patientids"
+                  type="number"
                   class="form-control"
                   placeholder="Enter UserID of patient(Pxxxxxxx)"
                 />
@@ -112,6 +114,13 @@
 
 
 
+<!-- doctors section starts  -->
+
+<section id="doctors" ></section>
+
+<!-- doctors section ends -->
+
+
 <!-- patient data starts  -->
 
 <section class="records" id="records">
@@ -125,35 +134,10 @@
         <th scope="col">sickness</th>
         <th scope="col">Doctor's name</th>
         <th scope="col">prescription from the doctor</th>
-        <th scope="col">Ratings to doctor</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Viral </td>
-        <td>Dr. Manish Gupta</td>
-        <td>cause - climate change <br>
-            medicine- paracetamol tab every 6 hr
-        </td>
-        <td>
-          <input type="range" id="vol" name="vol" min="0" max="50" value=10>
-        </td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Ear pain</td>
-        <td>Mrs. Simran</td>
-        <td>cause - winter <br>
-          medicine - ear drop
-        </td>
-        <td>          <input type="range" id="vol" name="vol" min="0" max="50" value=10>
-        </td>
-      </tr>
-      <tr>
-
-
-      </tr>
+    <tbody id="listrec">
+      
       
     </tbody>
   </table>

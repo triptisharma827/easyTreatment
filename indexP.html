@@ -92,7 +92,7 @@
              
 
               <div class="col-md-6">
-                <input
+                <input id="pincode"
                   type="text"
                   class="form-control"
                   placeholder="Enter pincode to find nearby doctor"
@@ -121,29 +121,9 @@
 <section class="doctors" id="doctors" >
 <br><br><br><br><br>
   <h1 class="heading"> our <span> expert doctors</span> </h1>
+  <div class="box-container" id="listdoc">
 
-  <div class="box-container">
-
-      <div class="box">
-          <img src="images/doc-1.jpg" alt="">
-          <h3>Mrs. Simran</h3>
-          <span>expert doctor</span>
-          
-      </div>
-
-      <div class="box">
-          <img src="images/doc-2.jpg" alt="">
-          <h3>Dr. prakash</h3>
-          <span>expert doctor</span>
-          
-      </div>
-
-      <div class="box">
-          <img src="images/doc-3.jpg" alt="">
-          <h3>Dr. Abhinav</h3>
-          <span>expert doctor</span>
-          
-      </div>
+      
 
   </div>
 
@@ -168,28 +148,8 @@
         <th scope="col">Ratings to doctor</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Viral </td>
-        <td>Dr. Manish Gupta</td>
-        <td>cause - climate change <br>
-            medicine- paracetamol tab every 6 hr
-        </td>
-        <td>
-          <input type="range" id="vol" name="vol" min="0" max="50" value=10>
-        </td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Ear pain</td>
-        <td>Mrs. Simran</td>
-        <td>cause - winter <br>
-          medicine - ear drop
-        </td>
-        <td>          <input type="range" id="vol" name="vol" min="0" max="50" value=10>
-        </td>
-      </tr>
+    <tbody id="listrec">
+      
       
     </tbody>
   </table>

@@ -114,7 +114,7 @@
                         <div  class="form-control">
                             <input type="button" onclick="myFunction()"  value="Select your specilization" style="border: none;" class="dropbtn form-control">
                             <div id="myDropdown" class="form-control dropdown-menu " style="width:80%">
-                              <input type="checkbox" style="color: black;padding-left: 10px;" id="vehicle1" name="vehicle1" value="Anesthesiology">Anesthesiology<br>
+                              
                               <input type="checkbox" style="color: black;" id="op0" value="Cardiology" >Cardiology<br>
                               <input type="checkbox" style="color: black;" id="op1" value="Dermatology" >Dermatology<br>
                               <input type="checkbox" style="color: black;" id="op2" value="gynecologist" >gynecologist<br>
@@ -126,6 +126,7 @@
                               <input type="checkbox" style="color: black;" id="op8" value="Otolaryngology (ENT)" >Otolaryngology (ENT)<br>
                               <input type="checkbox" style="color: black;" id="op9" value="Psychiatry" >Psychiatry<br>
                               <input type="checkbox" style="color: black;" id="op10" value="Surgery" >Surgery<br>
+                              <input type="checkbox" style="color: black;" id="op11" value="Anesthesiology">Anesthesiology<br>
                             </div>
                           </div>
 
@@ -320,11 +321,11 @@ function Login(){
 }
 function RegisterD(){    
   var adhar=document.getElementById('RDaadhar').value.toString();
-  var specialist=[];
+  var specialist="";
   
   
-for (let i = 0; i < 11; i++) {
-  if (document.getElementById('op'+i).checked)specialist.push(document.getElementById('op'+i).value);
+for (let i = 0; i < 12; i++) {
+  if (document.getElementById('op'+i).checked)specialist+=document.getElementById('op'+i).value;
 }
 
   var statuss="a";
