@@ -97,11 +97,14 @@ function action3(){
 .then(json =>{
    if(json["Count"]!=0){
    text="";
+   let i;
+   for( i=0;i<json["Count"];i++)text+="<tr><th scope=\"row\">"+(i+1)+"</th><td>"+json["Items"][i]["sickness"]["S"]+"</td><td>Dr."+json["Items"][i]["Dr"]["S"]+"</td><td>"+json["Items"][i]["prescription"]["S"]+"</td></tr>"
    
-   for(let i=0;i<json["Count"];i++)text+="<tr><th scope=\"row\">"+(i+1)+"</th><td>"+json["Items"][i]["sickness"]["S"]+"</td><td>Dr."+json["Items"][i]["Dr"]["S"]+"</td><td>"+json["Items"][i]["prescription"]["S"]+"</td></tr>"
+   text+="<tr><td colspan='4'></td><td><input style='position:absolute;right:0px;width:30px;height:30px;' type='button' value='+'></td></tr>";
+   //<th scope=\"row\" id=\"NewrecordId\">"+(i+1)+"</th><td><input  type='text' id='Newsickness'></td><td><input  type='text' id='priscription'></td>
    if(text.length!=0)document.getElementById("listrec").innerHTML=text;
     else document.getElementById("listrec").innerHTML="<h1>No records</h1>";
-
+    
    document.getElementById("records").style.display="inline";
 }
 })   
